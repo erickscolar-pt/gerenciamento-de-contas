@@ -1,0 +1,48 @@
+.title{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0;
+    border: 5px #000;
+    background-color: #f8f8f8;
+    padding: .8em;
+    height: 176px;
+}
+
+.title span{
+    margin-left: 10%;
+    font-size: 1.5em;
+}
+
+.title img{
+    position: absolute;
+    margin-left: 60%;
+}
+
+@media screen and (max-width: 800px){
+    .title{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin: 0;
+        border: 5px #000;
+        background-color: #f8f8f8;
+        padding: .1em;
+        height: 50px;
+    }
+    
+    .title span{
+        margin-left: 2em;
+        font-size: 1.5em;
+    }
+    
+    .title img{
+        margin-left: 90%;
+        height: 30px;
+        width: 30px;
+    }
+  }
+  
+/*   @media screen and (max-width: 600px){
+
+  } */
