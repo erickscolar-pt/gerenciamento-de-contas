@@ -49,11 +49,11 @@ function AuthProvider({children}){
             setUser(data);
             storageUser(data);
             setLoadingAuth(false);
-            toast.success('Bem vindo de volta!');
+            toast.success("Bem vindo de volta!");
         })
         .catch((error)=>{
             console.log(error);
-            toast.error('Usuario e senha incorretos');
+            toast.error("Usuario e senha incorretos");
             setLoadingAuth(false);
         })
     }

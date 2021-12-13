@@ -1,0 +1,96 @@
+.container{
+    display: flex;
+    align-items: center;
+    margin-left: 354px;
+    padding: 10px;
+}
+
+.form-profile .label-avatar{
+    width: 120px;
+    height: 120px;
+    padding-bottom: 18px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+}
+
+.form-profile .label-avatar input{
+    display: none;
+}
+
+.label-avatar span{
+    z-index: 99;
+    padding-top: 70px;
+    position: absolute;
+    transition: all 0.5s;
+}
+
+.label-avatar span:hover{
+    opacity: 1;
+    transform: scale(1.4);
+    padding-bottom: 60px;
+}
+
+.label-avatar img{
+    border-radius: 50px;
+}
+
+.form-profile{
+    width: 100%;
+}
+
+.form-profile label{
+    display: flex;
+    font-size: 15px;
+    height: 22px;
+    margin: 5px;
+}
+
+.form-profile input{
+    display: flex;
+    font-size: 15px;
+    border:1px;
+    border-radius: 20px;
+    height: 25px;
+    padding: 10px;
+}
+
+.form-profile button{
+    margin-top: 40px;
+    margin-left: 450px;
+    align-items: center;
+    width: 143px;
+    height: 40px;
+    border-radius: 20px;
+    color: #fff;
+    background-color: #272727;
+    transition: all 0.5s;
+}
+
+.form-profile button:hover{
+    color: #fff;
+    background-color: #303030;
+    transform: scale(1.1);
+}
+
+@media screen and (max-width: 800px){
+    .container{
+        margin-left: 0;
+    }
+    
+    .form-profile button{
+        margin-left: 320px;
+    }
+  }
+  
+  @media screen and (max-width: 600px){
+    .container{
+        margin-left: 0;
+    }
+    
+    .form-profile button{
+        margin-left: 190px;
+    }
+  }

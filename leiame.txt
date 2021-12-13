@@ -1,0 +1,3 @@
+#Site: Gerenciador de Contas Versão-1(gcv1)
+#Criador: Erick Scolar
+#Objetivo: Sistema automatizado para gerenciar contas e objetivos

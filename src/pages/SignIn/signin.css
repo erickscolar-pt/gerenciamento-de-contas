@@ -1,0 +1,70 @@
+
+/* Centraliza os itens */
+.container-center{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #464646;
+}
+
+/* Ajusta altura e alinhamento dos itens */
+.login{
+    background: #A10091;
+    width: 400px;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /*Deixa os itens um abaixo do outro*/
+    flex-direction: column;
+    border-radius: 20px;
+}
+
+/* Ajusta tamanho e posicionamento do logo */
+.logo-area{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.logo-area img{
+    padding: 20px;
+}
+
+/* Tamanho da janela do formulario e ajuste de texto e posicionamento */
+form{
+    margin-top: 1.5em;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Ajusta os campos de login e senha */
+.login input{
+    margin-bottom: 18px;
+    height: 30px;
+    border: 0;
+    border-radius: 15px;
+    padding: 15px;
+    font-size: 15px;
+    background-color: #fff ;
+    text-align: center;
+}
+
+/* Ajusta tamanho do botão Entrar */
+form button{
+    height: 35px;
+    border:0;
+    border-radius: 15px;
+    background-color: #272727 ;
+    color: #FFF;
+    font-size: 15px;
+}
+
+/* Ajusta link Cadastrar */
+.login a{
+    margin: 1.5em 0;
+    color: #FFF;
+    cursor: pointer;
+}

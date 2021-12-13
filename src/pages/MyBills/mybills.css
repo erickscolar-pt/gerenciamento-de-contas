@@ -1,0 +1,170 @@
+/* Botoes para adicionar contas */
+
+.form-bills{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 5%;
+}
+
+.form-bills .incluir-conta{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+}
+
+
+
+
+.form-bills .incluir-conta select{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 120px;
+    height: 30px;
+    border-radius: 20px;
+    background-color: #A10091;
+    color: #fff;
+    margin: 0 10px;
+}
+
+.form-bills .incluir-conta div{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 25%;
+    height: 25px;
+}
+
+.form-bills .incluir-conta div button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000;
+    background-color: #EFEFEF;
+    width: 115px;
+    height: 25px;
+}
+
+.form-bills .incluir-conta div button .icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-bills .incluir-conta div a{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+/* Inputs das contas */
+
+.adds-bills-inputs{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: 45px;
+}
+
+.adds-bills-inputs button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 0;
+    background-color: #EFEFEF;
+    width: 115px;
+    height: 25px;
+}
+
+.adds-bills-inputs input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    width: 200px;
+    text-align: center;
+    margin-right: 9%;
+    border-radius: 9px;
+    border: 1px;
+}
+
+.adds-bills-inputs .input-nome-conta{
+    background-color: #FF4F4F;
+    color: #272727;
+}
+
+.adds-bills-inputs select{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: 0;
+    width: 161px;
+    height: 30px;
+    border-radius: 20px;
+    background-color: #FF4F4F;
+    color: #272727;
+}
+
+.page{
+    width: 100%;
+}
+
+.salvar{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.salvar button{
+    text-align: center;
+    width: 143px;
+    height: 40px;
+    border-radius: 20px;
+    border: 0;
+    background-color: #272727;
+    color: #fff;
+}
+
+@media screen and (max-width: 800px){
+    .adds-bills-inputs input {
+        margin-right: 1%;
+    }
+    .form-bills .incluir-conta div button .icon{
+        width: 28px;
+    }
+    .form-bills .incluir-conta div{
+        width: 23%;
+    }
+    .adds-bills-inputs button{
+        width: 100px;
+    }
+    .adds-bills-inputs{
+        width: 92%;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .adds-bills-inputs input {
+        margin-right: 1%;
+    }
+    .form-bills .incluir-conta div button .icon{
+        width: 25px;
+    }
+    .form-bills .incluir-conta div{
+        width: 17%;
+    }
+    .adds-bills-inputs button{
+        width: 50px;
+    }
+    .adds-bills-inputs{
+        width: 95%;
+    }
+}
