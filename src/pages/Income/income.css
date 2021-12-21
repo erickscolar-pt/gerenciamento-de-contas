@@ -47,6 +47,7 @@
     background-color: #EFEFEF;
     width: 115px;
     height: 25px;
+    border: none;
 }
 
 .form-income .incluir-conta div button .icon{
@@ -154,17 +155,59 @@
 @media screen and (max-width: 600px){
     .adds-income-inputs input {
         margin-right: 1%;
+        width: 150px;
     }
     .form-income .incluir-conta div button .icon{
         width: 25px;
     }
     .form-income .incluir-conta div{
-        width: 17%;
+        width: 5%;
     }
     .adds-income-inputs button{
-        width: 50px;
+        width: 44px;
     }
     .adds-income-inputs{
-        width: 95%;
+        width: 98%;
+    }
+    .form-income .incluir-conta div a {
+        display: none;
+    }
+    .form-income .incluir-conta {
+        width: 97%;
+    }
+}
+
+@media screen and (max-width: 400px){
+    .adds-income-inputs input {
+        margin-right: 2%;
+        width: 98px;
+    }
+    .form-income .incluir-conta div button .icon{
+        width: 25px;
+    }
+    .form-income .incluir-conta div{
+        width: 5%;
+    }
+    .adds-income-inputs button{
+        width: 44px;
+    }
+    .adds-income-inputs{
+        width: 88%;
+    }
+    .form-income .incluir-conta div a {
+        display: none;
+    }
+    .form-income .incluir-conta {
+        width: 60%;
+    }
+    .adds-income-inputs select {
+        width: 100px;
+    }
+    .pesquisar {
+        width: 110px;
+    }
+
+    .pesquisar button {
+        width: 95px;
     }
 }

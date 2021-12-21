@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { AuthContext } from '../../contexts/auth';
 import './signin.css';
 import logo from '../../assets/Logo.png';
-import { ToastContainer, toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 
 function SignIn() {
 
@@ -12,7 +12,7 @@ function SignIn() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
-  const {signIn, loadingAuth} = useContext(AuthContext);
+  const {signIn} = useContext(AuthContext);
 
   function handleSubmit(e){
     e.preventDefault();

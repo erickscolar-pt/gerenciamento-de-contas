@@ -7,13 +7,13 @@ import { AuthContext } from '../../contexts/auth';
 import { useContext } from 'react';
 import avatar from '../../assets/avatar.png'
 import { FiUpload } from 'react-icons/fi';
-import { ToastContainer, toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 
 export default function Profile(){
     const{user, setUser, storageUser} = useContext(AuthContext);
 
     const [nome, setNome] = useState(user && user.nome);
-    const [email, setEmail] = useState(user && user.email);
+    const [email] = useState(user && user.email);
     const [password, setPassword] = useState(user && user.password);
     const [salario, setSalario] = useState(user && user.salario);
 
