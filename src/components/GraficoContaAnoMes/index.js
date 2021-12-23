@@ -1,7 +1,88 @@
-import React from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { Bar } from 'react-chartjs-2';
+import { AuthContext } from '../../contexts/auth';
+import firebase from '../../services/firebaseConnection';
 
 const GraficoContaAnoMes = () => {
+    const{user, setUser, storageUser} = useContext(AuthContext);
+    const [email] = useState(user && user.email);
+    const meses = [
+        {
+          label: "Janeiro",
+          value: "janeiro",
+        },
+        {
+          label: "Fevereiro",
+          value: "fevereiro",
+        },
+        {
+          label: "Março",
+          value: "marco",
+        },
+        {
+          label: "Abril",
+          value: "abril",
+        },
+        {
+          label: "Maio",
+          value: "maio",
+        },
+        {
+          label: "Junho",
+          value: "junho",
+        },
+        {
+          label: "Julho",
+          value: "julho",
+        },
+        {
+          label: "Agosto",
+          value: "agosto",
+        },
+        {
+          label: "Setembro",
+          value: "setembro",
+        },
+        {
+          label: "Outubro",
+          value: "outubro",
+        },
+        {
+          label: "Novembro",
+          value: "novembro",
+        },
+        {
+          label: "Dezembro",
+          value: "dezembro",
+        }
+      ];
+
+
+      let parametros = []
+
+      let i=2000
+      for(;i<=2080;i++){
+        meses.map((meses)=>(
+            parametros.push({
+                ano: i,
+                mes: meses.value
+            }))
+        );
+    }
+
+
+    let parmObje = [];
+    //let parmRendas = '';
+
+    parametros.map((parametros)=>{
+        //console.log('dividas_' + email + '_' + parametros.mes + '_' + parametros.ano);
+        parmObje    = ['objetivos_' + email + '_' + parametros.mes + '_' + parametros.ano];
+        //parmRendas  = 'rendas_' + email + '_' + parametros.mes + '_' + parametros.ano;                     
+    })
+
+    console.log(parmObje)
+    //console.log(parmRendas)
+
     return <div> 
         <Bar
         data={{
