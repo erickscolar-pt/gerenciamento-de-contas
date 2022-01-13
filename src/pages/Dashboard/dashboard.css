@@ -2,3 +2,20 @@
     width: 150px;
     background-color: #EFEFEF;
 }
+
+.form-income .incluir-conta div button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000;
+    background-color: #EFEFEF;
+    width: 115px;
+    height: 25px;
+    border: none;
+}
+
+.form-income .incluir-conta div button .icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

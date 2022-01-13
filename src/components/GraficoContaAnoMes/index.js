@@ -3,9 +3,12 @@ import { Bar } from 'react-chartjs-2';
 import { AuthContext } from '../../contexts/auth';
 import firebase from '../../services/firebaseConnection';
 
+
 const GraficoContaAnoMes = () => {
     const{user, setUser, storageUser} = useContext(AuthContext);
     const [email] = useState(user && user.email);
+    const [nomeConta, setNomeConta] = useState(''); 
+    const [listaDados, setListaDados] = useState('');
     const meses = [
         {
           label: "Janeiro",
@@ -78,12 +81,36 @@ const GraficoContaAnoMes = () => {
         //console.log('dividas_' + email + '_' + parametros.mes + '_' + parametros.ano);
         parmObje    = ['objetivos_' + email + '_' + parametros.mes + '_' + parametros.ano];
         //parmRendas  = 'rendas_' + email + '_' + parametros.mes + '_' + parametros.ano;                     
+        //console.log(parmObje)
+        async function buscaDividas(){
+          await firebase.firestore().collection(parmObje)
+          .get()
+          .then((snapshot)=>{
+            let lista = [];
+    
+            snapshot.forEach((doc)=>{
+              lista.push({
+                id: doc.id,
+                nomeConta: doc.data().nomeConta,
+                nomeDivida: doc.data().nomeDivida,
+                valorDivida: doc.data().valorDivida
+              })
+            })
+            setListaDados(lista);
+            console.log(lista)
+          })
+          .catch(()=>{
+            console.log('deu ruim')
+          })
+        }
     })
 
-    console.log(parmObje)
     //console.log(parmRendas)
 
-    return <div> 
+
+
+
+    return<div> 
         <Bar
         data={{
             labels: ['2018', '2019', '2020', '2021', '2022', '2023','2024'],

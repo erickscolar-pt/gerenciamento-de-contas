@@ -18,7 +18,7 @@ const{ signed, loading } = useContext(AuthContext);
   }
 
   if(!signed && isPrivate){
-    return <Redirect to="/" />
+    return <Redirect to="/signin" />
   }
 
   if(signed && !isPrivate){
@@ -28,6 +28,7 @@ const{ signed, loading } = useContext(AuthContext);
 
   return(
     <Route
+    
       {...rest}
       render={ props => (
         <Component {...props} />

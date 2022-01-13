@@ -1,0 +1,33 @@
+nav.topnav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: rgba(161, 0, 145, .5);
+  width: 100%;
+  height: 80px;
+}
+
+nav.topnav li {
+    float: right;
+}
+
+nav.topnav li a {
+  display: flex;
+  align-items: center;
+  color: white;
+  text-align: center;
+  padding: 100% 30px;
+  text-decoration: none;
+}
+
+nav.topnav li a:hover:not(.active) {background-color: #111;}
+
+nav.topnav li a.active {background-color: #04AA6D;}
+
+nav.topnav li.right {float: left;}
+
+@media screen and (max-width: 600px) {
+  nav.topnav li.right, 
+  nav.topnav li {float: none;}
+}

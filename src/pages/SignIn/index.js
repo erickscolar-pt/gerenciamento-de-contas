@@ -38,7 +38,7 @@ function SignIn() {
           <input type="password" placeholder="Senha" value={password} onChange={(e) => setPassword(e.target.value) } />
           <button type="submit">Entrar</button>
         </form>
-        <Link to="./register">Não possui conta? Cadastrar</Link>
+        <Link className='route-register' to="./register">Não possui conta? Cadastrar</Link>
       </div>
     </div>
   );

@@ -10,6 +10,7 @@ import MyBills from '../pages/MyBills';
 import Income from '../pages/Income';
 import mygoals from '../pages/mygoals';
 import Profile from '../pages/Profile';
+import Home from '../pages/Home';
 
 
 
@@ -17,7 +18,8 @@ import Profile from '../pages/Profile';
 export default function Routes(){
   return(
     <Switch>
-      <Route exact path="/" component={SignIn} />
+      <Route exact path="/" component={Home} />
+      <Route exact path="/signin" component={SignIn} />
       <Route exact path="/register" component={SignUp} />
 
       <Route exact path="/dashboard" component={Dashboard} isPrivate />

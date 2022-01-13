@@ -1,6 +1,10 @@
 
 /* Centraliza os itens */
 .container-center{
+    background-image: url('../../assets/purple-leaves-in-the-garden.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     height: 100%;
     display: flex;
     justify-content: center;
@@ -8,9 +12,47 @@
     background-color: #464646;
 }
 
+.container-center .login form .area-btn-google{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: .9em 0;
+}
+
+.container-center .login form .btn-google{
+    align-items: center;
+    /*background-color: #272727 !important;*/
+    border-radius: 26px !important;
+    display: flex;
+    justify-content: center;
+    height: 45px;
+    width: 65% !important;
+}
+
+/* element.style {
+    background-color: rgb(255, 255, 255);
+    display: inline-flex;
+    align-items: center;
+    color: rgba(0, 0, 0, 0.54);
+    box-shadow: rgb(0 0 0 / 24%) 0px 2px 2px 0px, rgb(0 0 0 / 24%) 0px 0px 1px 0px;
+    padding: 0px;
+    border: 1px solid transparent;
+    font-size: 14px;
+    font-weight: 500;
+    font-family: Roboto, sans-serif;
+} */
+
+.container-center .login form .btn-google:hover{
+    border: 1px solid rgb(161, 0, 145)!important;
+    background-color: #fff !important;
+    color: rgb(161, 0, 145) !important;
+    transition: .6s ease-in !important;
+}
+
+
 /* Ajusta altura e alinhamento dos itens */
 .login{
-    background: #A10091;
+    background: rgba(161, 0, 145, .5);
     width: 400px;
     height: 80%;
     display: flex;
@@ -62,9 +104,22 @@ form button{
     font-size: 15px;
 }
 
+form button:hover{
+    border: 1px solid rgb(161, 0, 145);
+    background-color: #fff ;
+    color: rgb(161, 0, 145);
+    transition: .6s ease-in;
+}
+
 /* Ajusta link Cadastrar */
-.login a{
+.login .route-register{
     margin: 1.5em 0;
+    color: #FFF;
+    cursor: pointer;
+}
+
+.container-center .login .route-login{
+    margin: .1em 0;
     color: #FFF;
     cursor: pointer;
 }

@@ -2,7 +2,8 @@ import { useState, useContext } from 'react';
 import logo from '../../assets/Logo.png';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../contexts/auth';
-
+import iconGoogle from '../../assets/google.png';
+import GoogleLogin from 'react-google-login';
 
 function SignUp() {
 
@@ -14,6 +15,14 @@ function SignUp() {
 
   const { signUp } = useContext(AuthContext);
 
+  const responseGoogle = (response) => {
+    console.log(response);
+    const { 
+      profileObj: { name, email,imageUrl } 
+    } = response;
+    setNome(name);
+    setEmail(email);
+  }
 
   function handleSubmit(e){
     e.preventDefault();
@@ -33,10 +42,25 @@ function SignUp() {
           <input type="text" placeholder="E-mail" value={email} onChange={ (e) => setEmail(e.target.value) }/>
           <input type="password" placeholder="Senha" value={password} onChange={(e) => setPassword(e.target.value) } />
           <input type="text" placeholder="Nome" value={nome} onChange={ (e) => setNome(e.target.value) }/>
-          <input type="number" step="0.01" min="0.01" placeholder="Salario" value={salario} onChange={ (e) => setSalario(e.target.value) }/>
+          <input type="number" step="0.01" min="0.01" placeholder="Salario" onChange={ (e) => setSalario(e.target.value) }/>
           <button type="submit">Cadastrar</button>
+{/*           <figure className='btn-google'>
+            <a href='#'><img src={iconGoogle} alt='Google' width={40} height={40}/></a>
+          </figure> */}
+
+          <div className='area-btn-google'>
+            <GoogleLogin
+              className='btn-google'
+              clientId="164186316270-fe96fm2v5f0a79lt819filn9rc0s6ec2.apps.googleusercontent.com"
+              buttonText="Preencher com Google"
+              onSuccess={responseGoogle}
+              onFailure={responseGoogle}
+            />
+          </div>
+
+
         </form>
-        <Link to="/">Possui conta? Entrar</Link>
+        <Link className='route-login' to="/">Possui conta? Entrar</Link>
       </div>
     </div>
   );

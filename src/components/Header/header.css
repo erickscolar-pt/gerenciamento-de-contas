@@ -11,6 +11,13 @@
     flex-direction: column;
   }
   
+  .sidebar .avatar{
+    background-image: url('../../assets/purple-leaves-in-the-garden.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
   .sidebar div{
     background-color: #A10091;
     background-position: center;

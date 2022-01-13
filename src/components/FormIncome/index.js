@@ -175,7 +175,7 @@ export default function FormIncome(){
             <div className="page">
             <div className="form-income" >
             <div className="pesquisar">
-                    <button onClick={buscaListaRenda}><AiOutlineSearch color="#ffff" size={25} />Pesquisar</button>
+              <button onClick={buscaListaRenda}><AiOutlineSearch color="#ffff" size={25} />Pesquisar</button>
             </div>
                 <div className="incluir-conta">
                     <select value={selectMes} onChange={(e) => setSelectMes(e.target.value)}>
