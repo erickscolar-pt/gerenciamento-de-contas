@@ -60,7 +60,7 @@ function SignUp() {
 
 
         </form>
-        <Link className='route-login' to="/">Possui conta? Entrar</Link>
+        <Link className='route-login' to="/signin">Possui conta? Entrar</Link>
       </div>
     </div>
   );
